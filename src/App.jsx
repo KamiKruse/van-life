@@ -1,8 +1,9 @@
 import { StrictMode } from "react";
-import About from "./components/About.jsx";
-import Home from "./components/Home.jsx";
-import Vans from "./components/Vans.jsx";
+import About from "./pages/About.jsx";
+import Home from "./pages/Home.jsx";
+import Vans from "./pages/Vans.jsx";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import "./server";
 function App() {
   return (
     <StrictMode>
