@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #FFF7ED;
+  background-color: #fff7ed;
   max-height: 100vh;
 }
 
@@ -55,7 +55,7 @@ body {
       rgba(45, 45, 45, 0.8),
       rgba(28, 28, 28, 0.8)
     ),
-    url("./src/assets/mountain-peaks-beautiful-scenery.jpg");
+    url("/mountain-peaks-beautiful-scenery.jpg");
   background-size: cover;
 }
 .home-page > section {
@@ -87,54 +87,54 @@ body {
   font-weight: 600;
 }
 .about-me {
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-me-img {
   width: 100%;
 }
-.about-details{
+.about-details {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 3rem;
   margin-inline: 8rem;
   margin-bottom: 3rem;
-  gap:1.5rem;
+  gap: 1.5rem;
 }
-.about-heading{
+.about-heading {
   font-size: 2rem;
   font-weight: 700;
   color: #161616;
 }
-.about-desc{
+.about-desc {
   font-size: 1rem;
   font-weight: 600;
   color: #161616;
 }
 
-.explore-vans{
+.explore-vans {
   width: 100%;
-  background-color: #FFCC8D;
+  background-color: #ffcc8d;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding: 2.5rem;
   border: none;
-  border-radius:5px ;
+  border-radius: 5px;
 }
-.explore-vans-text{
+.explore-vans-text {
   font-size: 1.5rem;
   color: #161616;
   font-weight: 700;
 }
-.explore-vans-btn{
+.explore-vans-btn {
   margin-top: 2rem;
-  color:white;
+  color: white;
   background-color: #161616;
   font-family: Inter;
   font-size: 1em;

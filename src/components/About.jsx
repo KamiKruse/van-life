@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 export default function About() {
   return (
     <>
@@ -17,7 +18,7 @@ export default function About() {
       </header>
       <main className="about-me">
         <img
-          src="./src/assets/image 54.png"
+          src="/image54.png"
           alt="van-overlooking-beach"
           className="about-me-img"
         />
