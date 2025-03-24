@@ -3,7 +3,7 @@ import About from "./pages/About.jsx";
 import Home from "./pages/Home.jsx";
 import Vans from "./pages/Vans.jsx";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import "./server";
+import "../server.js";
 function App() {
   return (
     <StrictMode>
