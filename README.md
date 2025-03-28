@@ -9,4 +9,5 @@ App that helps you rent a van for your road-trip.
 - CSS
 - React 19
 - React Router 6.4.3
+- MirageJS
 - Firebase
