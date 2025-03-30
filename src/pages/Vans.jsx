@@ -19,19 +19,6 @@ export default function Vans() {
   }, []);
   return (
     <>
-      <header className="nav-bar">
-        <Link to="/" className="logo">
-          #VANLIFE
-        </Link>
-        <nav className="nav-links">
-          <Link to="/about" className="links">
-            About
-          </Link>
-          <Link to="/vans" className="links">
-            Vans
-          </Link>
-        </nav>
-      </header>
       <main className="vans-page">
         <section className="vans-filters">
           <p className="vans-heading">Explore our van options</p>
@@ -62,7 +49,6 @@ export default function Vans() {
           })}
         </ul>
       </main>
-      <footer>2022 #VANLIFE</footer>
     </>
   );
 }

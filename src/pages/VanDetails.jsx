@@ -29,19 +29,6 @@ export default function VanDetails() {
 
   return (
     <>
-      <header className="nav-bar">
-        <Link to="/" className="logo">
-          #VANLIFE
-        </Link>
-        <nav className="nav-links">
-          <Link to="/about" className="links">
-            About
-          </Link>
-          <Link to="/vans" className="links">
-            Vans
-          </Link>
-        </nav>
-      </header>
       <Link to="/vans" className="vans-page-backlink">
         <ArrowLeft size={18} color="grey" />
         <p className="vansDetails-link-text">Back to all Vans</p>
@@ -65,7 +52,6 @@ export default function VanDetails() {
           <button className="vanDetails-btn">Rent this Van</button>
         </section>
       </main>
-      <footer>2022 #VANLIFE</footer>
     </>
   );
 }

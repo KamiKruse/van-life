@@ -3,19 +3,6 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <>
-      <header className="nav-bar">
-        <Link to="/" className="logo">
-          #VANLIFE
-        </Link>
-        <nav className="nav-links">
-          <Link to="/about" className="links">
-            About
-          </Link>
-          <Link to="/vans" className="links">
-            Vans
-          </Link>
-        </nav>
-      </header>
       <main className="home-page">
         <section>
           <p className="banner-text">
@@ -27,8 +14,7 @@ export default function Home() {
           </p>
           <button className="home-page-button">Find your van</button>
         </section>
-      </main>
-      <footer>2022 #VANLIFE</footer>
+      </main> 
     </>
   );
 }
