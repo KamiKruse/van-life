@@ -1,10 +1,19 @@
-import { Link, useParams } from "react-router-dom";
-import { ArrowLeft} from "lucide-react";
+import {
+  Link,
+  useParams,
+  useLocation,
+  useSearchParams,
+} from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function VanDetails() {
   const [vanDetail, setVanDetail] = useState({});
+  const location = useLocation();
+  const [searchParams] = useSearchParams(location.state.search);
   const params = useParams();
+  const type = searchParams.get("type");
+  console.log(searchParams.get("type"));
   useEffect(() => {
     const vanDeets = async () => {
       try {
@@ -26,12 +35,14 @@ export default function VanDetails() {
       return "van-tag-simple";
     }
   };
-
+  const search = location.state?.search || "";
   return (
     <>
-      <Link to="/vans" className="vans-page-backlink">
+      <Link to={`..${search}`} relative="path" className="vans-page-backlink">
         <ArrowLeft size={18} color="grey" />
-        <p className="vansDetails-link-text">Back to all Vans</p>
+        <p className="vansDetails-link-text">
+          {type ? `Back to ${type} vans`: "Back to all vans"}
+        </p>
       </Link>
       <main className="van-details-main">
         <img

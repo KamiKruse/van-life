@@ -3,6 +3,7 @@ import About from "./pages/About.jsx";
 import Home from "./pages/Home.jsx";
 import Vans from "./pages/Vans.jsx";
 import VanDetails from "./pages/VanDetails.jsx";
+import PageNotFound from "./pages/PageNotFound.jsx";
 import Layout from "./components/Layout.jsx";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "../server.js";
@@ -36,6 +37,7 @@ function App() {
               </Route>
               <Route path="reviews" element={<Reviews />} />
             </Route>
+            <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
