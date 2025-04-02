@@ -11,7 +11,13 @@ body {
   background-color: #fff7ed;
   max-height: 100vh;
 }
-
+.loading-state {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #161616;
+}
 .nav-bar {
   position: sticky;
   top: 0;
@@ -242,7 +248,6 @@ body {
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
-  
 }
 .van-tag-rugged {
   width: 20%;
@@ -437,7 +442,7 @@ body {
   width: 10%;
   border-radius: 10px;
 }
-.not-found{
+.not-found {
   height: 100vh;
   width: 100vh;
   margin-inline: auto;
@@ -446,9 +451,9 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap:50px
+  gap: 50px;
 }
-.not-found-button{
+.not-found-button {
   width: 100%;
   background-color: #161616;
   padding: 1.5rem;
@@ -456,12 +461,68 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
 }
-.not-found-vans-heading{
+.not-found-vans-heading {
   color: #161616;
   font-size: 4rem;
   font-weight: 800;
 }
+.login-page{
+  height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.login-heading{
+  color:#161616;
+  font-size: 2.5rem;
+  font-weight: 800;
+
+}
+.login-form{
+  margin-top: 3rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+.login-input{
+  padding: 1rem 1rem;
+  font-family: Inter;
+  font-size: 1rem ;
+  font-weight: 500;
+  color: #4d4d4d;
+  border: none;
+  border-radius: 10px;
+  margin-block: 3px;
+  border: 1px solid #d1d5db
+}
+.login-button{
+  margin-top: 1.8rem;
+  background-color: #ff8c38;
+  padding: 1rem;
+  border-radius: 10px;
+  font-family: Inter;
+  font-size: 1rem ;
+  font-weight: 700;
+  border: none;
+}
+.login-text{
+  color:#161616;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+}
+.login-link{
+  color:#ff8c38;
+   font-size: 1rem;
+  font-weight: 600;
+}
 footer {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
   background-color: #252525;
   padding: 20px;
   text-align: center;

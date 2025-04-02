@@ -1,21 +1,27 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import VanList from "../components/VanList";
+import { vanGetCall } from "../api";
 
 export default function Vans() {
   const [list, setList] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const typeFilter = searchParams.get("type");
 
   useEffect(() => {
     const getVans = async () => {
+      setLoading(true);
       try {
-        const response = await fetch("/api/vans");
-        const result = await response.json();
-        result.vans.map((van) => setList((item) => [...item, van]));
+        const data = await vanGetCall();
+
+        data.map((van) => setList((item) => [...item, van]));
       } catch (error) {
-        console.log("Error fetching:", error);
+        setError(error);
+      } finally {
+        setLoading(false);
       }
     };
     getVans();
@@ -25,6 +31,20 @@ export default function Vans() {
     ? list.filter((van) => van.type.toLowerCase() === typeFilter)
     : list;
 
+  if (loading) {
+    return (
+      <h1 className="loading-state" aria-live="polite">
+        Loading...
+      </h1>
+    );
+  }
+  if (error) {
+    return (
+      <h1 className="loading-state" aria-live="assertive">
+        There was an error: {error.message}
+      </h1>
+    );
+  }
   return (
     <>
       <main className="vans-page">

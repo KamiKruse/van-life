@@ -13,7 +13,10 @@ export default function VanDetails() {
   const [searchParams] = useSearchParams(location.state.search);
   const params = useParams();
   const type = searchParams.get("type");
-  console.log(searchParams.get("type"));
+
+  // console.log(searchParams.get("type"));
+
+
   useEffect(() => {
     const vanDeets = async () => {
       try {
@@ -26,6 +29,8 @@ export default function VanDetails() {
     };
     vanDeets();
   }, [params]);
+
+
   const tagSwitch = () => {
     if (vanDetail.type === "luxury") {
       return "van-tag-luxury";
@@ -35,7 +40,9 @@ export default function VanDetails() {
       return "van-tag-simple";
     }
   };
+
   const search = location.state?.search || "";
+  
   return (
     <>
       <Link to={`..${search}`} relative="path" className="vans-page-backlink">
